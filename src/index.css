@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+
+@theme inline {
+  --color-brand: #00a3e0;        
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+}
+
+@custom-variant dark (&:is(.dark));
