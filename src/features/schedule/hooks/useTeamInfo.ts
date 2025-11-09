@@ -10,7 +10,7 @@ export function sportIdToLevel(id?: number): string {
 		case 12:
 			return 'AA'
 		case 13:
-			return 'High-A'
+			return '1A'
 		case 14:
 			return 'A'
 		case 16:

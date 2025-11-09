@@ -26,7 +26,10 @@ function App() {
   return (
     <div className="p-4">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-xl font-semibold">Marlins Affiliates Schedule</h1>
+        <div className="flex items-center gap-2">
+          <img src="/images.png" alt="Marlins" className="h-7 w-7 rounded-sm" />
+          <h1 className="text-xl font-semibold">Marlins Affiliates Schedule</h1>
+        </div>
         <div className="flex items-center gap-2">
           <button
             className="px-2 py-1 rounded border text-slate-700 hover:bg-slate-50"
@@ -63,11 +66,12 @@ function App() {
             ▶
           </button>
           <button
-            className="ml-2 px-3 py-1 rounded bg-[--color-brand] text-white hover:opacity-90"
+            className={`ml-2 px-3 py-1 rounded border text-slate-700 bg-slate-100 hover:bg-slate-200 inline-flex items-center gap-2 ${isFetching ? 'opacity-60 cursor-not-allowed' : ''}`}
             onClick={() => refetch()}
             disabled={isFetching}
           >
-            {isFetching ? 'Refreshing…' : 'Refresh'}
+            <span className={`${isFetching ? 'animate-spin' : ''}`} aria-hidden>↻</span>
+            <span>{isFetching ? 'Refreshing…' : 'Refresh'}</span>
           </button>
         </div>
       </div>
